@@ -1,4 +1,5 @@
-# First solution, converting the number to a string and iterating through it (faster than 5.8% of Python submissions, meh)
+# First solution, converting the number to a string and iterating through it (slow)
+
 
 class Solution:
     def isHappy(self, n: int) -> bool:
@@ -6,14 +7,14 @@ class Solution:
         steps = set()
         steps.add(n)
         
-        while (n != 1):
+        while n != 1:
             val = 0
             for d in str(n):
                 val = val + int(d)*int(d)
             n = val
             ptLen = len(steps)
             steps.add(n)
-            if (ptLen == len(steps)):
+            if ptLen == len(steps):
                 return False
         return True
         
@@ -26,15 +27,15 @@ class Solution2:
         steps = set()
         steps.add(n)
         
-        while (n != 1):
+        while n != 1:
             val = 0
-            while (n != 0):
+            while n != 0:
                 val += (n % 10)**2
                 n = n // 10
             n = val
             ptLen = len(steps)
             steps.add(n)
-            if (ptLen == len(steps)):
+            if ptLen == len(steps):
                 return False
         return True
         
@@ -48,13 +49,13 @@ class Solution3:
         steps = set()
         steps.add(n)
         
-        while (n != 1):
+        while n != 1:
             val = 0
-            while (n != 0):
+            while n != 0:
                 val += (n % 10)**2
                 n = n // 10
             n = val
-            if (n in steps):
+            if n in steps:
                 return False
             else:
                 steps.add(n)

@@ -1,14 +1,24 @@
-# Dict implementation, will do the in-place implementation later
+# O(1) memory approach with the XOR operator
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        for val in nums[1:]:
+            nums[0] ^= val
+
+        return nums[0]
+
+
+# first implementation with dicts (Sets would have been better)
 
 class SolutionWithDicts:
     def singleNumber(self, nums: List[int]) -> int:
-        dict = {};
-        
+        valKeeper = {};
+
         for val in nums:
-            if (val in dict):
-                del dict[val]
+            if val in valKeeper:
+                del valKeeper[val]
             else:
-                dict[val] = 1
-  
-        for key in dict:
+                valKeeper[val] = 1
+
+        for key in valKeeper:
             return key
