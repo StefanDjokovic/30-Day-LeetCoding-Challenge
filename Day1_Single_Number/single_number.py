@@ -8,17 +8,16 @@ class Solution:
         return nums[0]
 
 
-# first implementation with dicts (Sets would have been better)
+# Implementation with sets
 
 class SolutionWithDicts:
     def singleNumber(self, nums: List[int]) -> int:
-        valKeeper = {};
+        valKeeper = set()
 
         for val in nums:
             if val in valKeeper:
-                del valKeeper[val]
+                valKeeper.remove(val)
             else:
-                valKeeper[val] = 1
+                valKeeper.add(val)
 
-        for key in valKeeper:
-            return key
+        return valKeeper.pop()
