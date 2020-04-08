@@ -15,7 +15,7 @@ class Solution:
             if index < size_prices - 1:
                 if curr_low_bought:
                     if i > prices[index + 1]:
-                        # print(f"Sold {curr_low} for {i}")
+                        # print(f"Sold {curr_low} for {i}")     # fStrings are so nice to use
                         stonks += i - curr_low
                         curr_low_bought = False
                 else:
