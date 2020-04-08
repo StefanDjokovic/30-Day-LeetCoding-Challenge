@@ -8,7 +8,7 @@ class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         count = 0
         point = head
-        while point != None:
+        while point is not None:
             count += 1
             point = point.next
 
