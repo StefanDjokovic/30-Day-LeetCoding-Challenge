@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 # O(n+m) space and time solution
 
 class Solution:
