@@ -1,5 +1,10 @@
 # 30-Day-LeetCoding-Challenge
-A repo of my LeetCode submission for this challenge (mainly Python)  
+
+**Completed!**
+
+![image](https://i.imgur.com/dhacjvm.png)
+
+A repo of my LeetCode submission for this challenge (Python)  
 
 Challenge link: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
 
